@@ -1,0 +1,24 @@
+<!-- Places details page -->
+
+<h1>Are we making progress? YES</h1>
+
+<p>we are in: <%= @place["name"] %></p>
+
+<h3>Posty posts</h3>
+
+<ul>
+  <% for post in @posts %>
+    <li>
+      <%= post["title"] %>
+      <%= post["date"] %>
+      <%= post["description"] %>
+    </li>
+  <% end %>
+</ul>
+
+<p>Troubleshooting <%= Post.all.inspect %></p> 
+
+<p><a href="/posts/new">New post</a></p>
+<br>
+<p><a href="/places">Back to my places</a></p>
+
