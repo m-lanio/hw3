@@ -14,6 +14,7 @@ class PostsController < ApplicationController
     
     # assign relationship between Post and Place
     @post["place_id"] = params["post"]["place_id"]
+    @post.save
     
     redirect_to "/places/#{@post["place_id"]}" #Not redirecting to the proper places page
   end
